@@ -3,7 +3,7 @@ importScripts('js/sw-utils.js');
 
 
 const STATIC_CACHE    = 'static-v2';
-const DYNAMIC_CACHE   = 'dynamic-v1';
+const DYNAMIC_CACHE   = 'dynamic-v2';
 const INMUTABLE_CACHE = 'inmutable-v1';
 
 // Lo que necesita si o si la aplicación
@@ -76,9 +76,9 @@ self.addEventListener('activate', e => {
                 return caches.delete(key);
             }
 
-            // if (  key !== DYNAMIC_CACHE && key.includes('dynamic') ) {
-            //     return caches.delete(key);
-            // }
+            if (  key !== DYNAMIC_CACHE && key.includes('dynamic') ) {
+                return caches.delete(key);
+            }
 
         });
 
