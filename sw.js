@@ -9,7 +9,7 @@ const INMUTABLE_CACHE = 'inmutable-v1';
 // Lo que necesita si o si la aplicación
 // menos frameworks tipo bootstrap etc. (Cosas que nohemos hecho nosotros).
 const APP_SHELL = [
-    '/',
+    // '/',
     'index.html',
     'css/style.css',
     'img/favicon.ico',
